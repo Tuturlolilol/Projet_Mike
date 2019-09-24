@@ -4,14 +4,13 @@
 
 export const environment = {
   production: false,
-
-  apiKey: "AIzaSyCZcMqok_czJD1xaQHJ_y0Bff0kinLq9zc",
-  authDomain: "cours-imie-eab32.firebaseapp.com",
-  databaseURL: "https://cours-imie-eab32.firebaseio.com",
-  projectId: "cours-imie-eab32",
+  apiKey: "AIzaSyBWo2uVk8sKPpqlZKvpVhojI1TS_0IiAUo",
+  authDomain: "named-foundry-196611.firebaseapp.com",
+  databaseURL: "https://named-foundry-196611.firebaseio.com",
+  projectId: "named-foundry-196611",
   storageBucket: "",
-  messagingSenderId: "1046963125991",
-  appId: "1:1046963125991:web:6aa18942e0e421924c6c42"
+  messagingSenderId: "459348101342",
+  appId: "1:459348101342:web:ab34cc43e0ba4fc4065a4f"
 };
 
 /*

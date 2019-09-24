@@ -4,10 +4,30 @@
 
   </head>
 
+    <body>
+        <form id="login-form">
+            <div class="heading">Firebase's Login with Google+</div>
+            <div class="left">
+              
+              <label for="email">Email</label> 
+              <br />
+              <input type="email" name="email" id="login" [(ngModel)]='user.login'> 
+              <br />
+              <label for="password">Password</label> 
+              <br />
+              <input type="password" name="password" id="password" [(ngModel)]='user.password'> 
+              <br />
+              <input type="submit" value="Login" (click)="submitForm()">
+            </div>
+            <div class="right">
+              <div class="connect">Register with</div>
+              <a href="" class="google-plus">
+                <p>Google</p>
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+              </a>
+            </div>
+        </form>  
 
-  <div> 
-
-  </div>
-
+    </body>
 
 </html>

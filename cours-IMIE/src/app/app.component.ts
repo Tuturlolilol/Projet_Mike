@@ -7,7 +7,7 @@ import { FirebaseAuthService } from './providers/firebase-auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cours-IMIE';
+  title = 'FireBase Connection';
   user = { login: "", password: ""}
 
   constructor(private firebaseAuth: FirebaseAuthService) {
