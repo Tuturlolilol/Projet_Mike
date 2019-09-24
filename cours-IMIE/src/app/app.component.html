@@ -1,33 +1,53 @@
-<html>
-    <title>Connexion via Google</title>
-  <head>
+<body>
 
-  </head>
+  <h1
+    style="font-family: 'Kaushan Script', cursive;text-align: center;color:white;padding-top: 150px;font-weight: 500px;font-size: 90px;">
+    Welcome</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+            <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center" style="
+            font-family: Source Sans Pro;
+            font-size: 35px;
+        ">Register</h5>
+            <form class="form-signin">
 
-    <body>
-        <form id="login-form">
-            <div class="heading">Firebase's Login with Google+</div>
-            <div class="left">
-              
-              <label for="email">Email</label> 
-              <br />
-              <input type="email" name="email" id="login" [(ngModel)]='user.login'> 
-              <br />
-              <label for="password">Password</label> 
-              <br />
-              <input type="password" name="password" id="password" [(ngModel)]='user.password'> 
-              <br />
-              <input type="submit" value="Login" (click)="submitForm()">
-            </div>
-            <div class="right">
-              <div class="connect">Register with</div>
-              <a href="" class="google-plus">
-                <p>Google</p>
-                <i class="fa fa-google-plus" aria-hidden="true"></i>
-              </a>
-            </div>
-        </form>  
+              <div class="form-label-group">
+                <label>Email</label>
+                <input placeholder="Email" type="email" id='login' name='login' [(ngModel)]='user.login'
+                  style="font-size: 35px;">
 
-    </body>
+              </div>
 
-</html>
+              <hr>
+
+              <div class="form-label-group">
+                <label>Password</label>
+                <input type="password" name='password' [(ngModel)]='user.password' style="font-size: 35px;">
+
+              </div>
+
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name='Register'
+                (click)="submitForm()" style="
+              font-family: Source Sans Pro;">Register</button>
+              <a class="d-block text-center mt-2 small" href="#">Sign In</a>
+              <hr class="my-4">
+
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit" style="
+              font-family: Source Sans Pro;" (click)="test()">
+                <i class="fab fa-google mr-2"></i> Sign up with Google</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>

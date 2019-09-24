@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FirebaseAuthService } from './providers/firebase-auth.service';
+import { AuthService } from './auth.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,15 +10,17 @@ import { FirebaseAuthService } from './providers/firebase-auth.service';
 })
 export class AppComponent {
   title = 'FireBase Connection';
-  user = { login: "", password: ""}
+  user = { login: "", password: "" }
 
-  constructor(private firebaseAuth: FirebaseAuthService) {
-
+  constructor(private firebaseAuth: FirebaseAuthService, private authService: AuthService) {
   }
 
-  submitForm(){
-
+  submitForm() {
     console.log('Toto');
     this.firebaseAuth.SignUp(this.user.login, this.user.password)
+  }
+
+  test() {
+    this.authService.googleSignin()
   }
 }
