@@ -16,25 +16,17 @@
             <form class="form-signin">
 
               <div class="form-label-group">
-                <input type="email" id='login' name='login' [(ngModel)]='user.login' style="font-size: 35px;">
-                <label for="inputEmail" style="
-                /* text-align: center; */
-                font-size: 20px;
-                padding-left: 25px;
-                padding-top: 5px;
-            ">Email address</label>
+                  <label>Email</label>                
+                <input placeholder="Email" type="email" id='login' name='login' [(ngModel)]='user.login' style="font-size: 35px;">
+                
               </div>
               
               <hr>
 
               <div class="form-label-group">
+                <label>Password</label>
                 <input type="password" name='password' [(ngModel)]='user.password' style="font-size: 35px;">
-                <label for="inputPassword" style="
-                /* text-align: center; */
-                font-size: 20px;
-                padding-left: 25px;
-                padding-top: 5px;
-            ">Password</label>
+                
               </div>
               
 
