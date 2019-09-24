@@ -17,13 +17,17 @@ import { from } from 'rxjs';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     FormsModule,
