@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { User } from './../app/user.model'; // optional
+
 
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -8,6 +10,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -23,14 +26,17 @@ export class AuthService {
     this.user$ = this.afAuth.authState.pipe(
       switchMap(user => {
         // Logged in
+
         if (user) {
           return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
         } else {
           // Logged out
           return of(null);
         }
+
       }
       )
+
     )
   }
 
@@ -39,6 +45,7 @@ export class AuthService {
     const credential = await this.afAuth.auth.signInWithPopup(provider);
     return this.updateUserData(credential.user);
   }
+
 
   private updateUserData(user) {
     // Sets user data to firestore on login
@@ -59,6 +66,5 @@ export class AuthService {
     await this.afAuth.auth.signOut();
     this.router.navigate(['/']);
   }
-
 
 }
