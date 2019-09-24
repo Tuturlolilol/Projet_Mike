@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { AuthService } from '../auth.service';
+
+import { Component } from '@angular/core';
+import { AuthService } from './../auth.service';
 
 
 @Component({
@@ -8,6 +8,13 @@ import { AuthService } from '../auth.service';
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss']
 })
-export class UserProfileComponent {
+
+
+export class UserProfileComponent{
+
   constructor(public auth: AuthService) { }
+
+  ngOnInit() {
+  }
+
 }
